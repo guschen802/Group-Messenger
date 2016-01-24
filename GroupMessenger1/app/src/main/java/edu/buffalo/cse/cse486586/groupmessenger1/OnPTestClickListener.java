@@ -148,7 +148,7 @@ public class OnPTestClickListener implements OnClickListener {
                 String returnKey = resultCursor.getString(keyIndex);
                 String returnValue = resultCursor.getString(valueIndex);
                 if (!(returnKey.equals(key) && returnValue.equals(val))) {
-                    Log.e(TAG, "(key, value) pairs don't match\n");
+                    Log.e(TAG, "(key, value) pairs don't match\n"+key+":"+returnKey+"-"+val+":"+returnValue);
                     resultCursor.close();
                     throw new Exception();
                 }
